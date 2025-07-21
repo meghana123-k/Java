@@ -77,7 +77,13 @@ public class VideoStore {
 	}
 
 	void listInventory() {
-
+		System.out.println("--------------------------------------------------------");
+		System.out.println("Video Name\t|\tCheckout Status\t|\tRating");
+		System.out.println("--------------------------------------------------------");
+		for (int j = 0; j < store.length; j++) {
+			System.out.println(store[j].getName()+"\t|\t"+store[j].getCheckout()+"\t|\t"+store[j].rating);
+			System.out.println("--------------------------------------------------------");
+		}
 	}
 
 }
