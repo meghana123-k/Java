@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Video {
+class Video {
 	String videoName;
 	boolean checkout;
 	int rating;
@@ -34,7 +34,7 @@ public class Video {
 	}
 }
 
-public class VideoStore {
+class VideoStore {
 	Video[] store = new Video[100];
 	int i = 0;
 
@@ -80,7 +80,7 @@ public class VideoStore {
 		System.out.println("--------------------------------------------------------");
 		System.out.println("Video Name\t|\tCheckout Status\t|\tRating");
 		System.out.println("--------------------------------------------------------");
-		for (int j = 0; j < store.length; j++) {
+		for (int j = 0; j < i; j++) {
 			System.out.println(store[j].getName()+"\t|\t"+store[j].getCheckout()+"\t|\t"+store[j].rating);
 			System.out.println("--------------------------------------------------------");
 		}
@@ -88,9 +88,10 @@ public class VideoStore {
 
 }
 
-public class VideoLauncher {
+class VideoLauncher {
 
 	public static void main(String[] args) {
+		VideoStore store = new VideoStore();
 		Scanner sc = new Scanner(System.in);
 		while (true) {
 			System.out.println("MAIN MENU");
@@ -103,24 +104,37 @@ public class VideoLauncher {
 					"6. Exit : ");
 			System.out.println("Enter your choice (1..6): ");
 			int choice = sc.nextInt();
+			sc.nextLine();
 			switch (choice) {
 				case 1:
-					String name = sc.nextLine();
-					Video vd = new Video(name);
+					System.out.println("Enter the name of the video you want to add: ");
+					String nameToAdd = sc.nextLine();
+					store.addVideo(nameToAdd);
 					break;
-				case 2:
-
+					case 2:
+					System.out.println("Enter the name of the video you want to check out: ");
+					String nameToCheckout = sc.nextLine();
+					store.doCheckout(nameToCheckout);
 					break;
 				case 3:
+					System.out.println("Enter the name of the video you want to Return: ");
+					String nameToReturn = sc.nextLine();
+					store.doReturn(nameToReturn);
 					break;
 				case 4:
-					String name = sc.next();
+					System.out.println("Enter the name of the video you want to Rate: ");
+					String nameToRate = sc.next();
+					System.out.println("Enter the rating for this video: ");
 					int rating = sc.nextInt();
-
+					sc.nextLine();
+					store.receiveRating(nameToRate, rating);
 					break;
 				case 5:
+					store.listInventory();
 					break;
 				case 6:
+					System.out.println("Exiting...!! Thanks for using the application.");
+					System.exit(0);
 					break;
 				default:
 					System.out.println("please enter valid choice...");
