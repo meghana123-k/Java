@@ -9,7 +9,9 @@ class Demo {
 	}
 	
 	public static void main(String... args) {
-		Demo d1 = new Demo(100);
+		System.out.println(new Demo(100));
+		System.out.println(new Demo());
+		
 		byte x = 127;
 		boolean b1= true;
 		double d = 1.2D;
