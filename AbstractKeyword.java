@@ -25,7 +25,7 @@ class updatedBMW extends BMW {
 
 public class AbstractKeyword {
     public static void main(String[] args) {
-        Car c = new updatedBMW();
+        Car c = new updatedBMW(); // upcasting
         c.drive();
         c.playMusic();
         c.sit();
