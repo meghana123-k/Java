@@ -25,5 +25,7 @@ class ArraysDemo2 {
 		} else {
 			System.out.println("No");
 		}
+
+		//
 	}
 }
