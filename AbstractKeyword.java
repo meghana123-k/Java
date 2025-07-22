@@ -3,9 +3,10 @@ abstract class Car {
     public void playMusic() {
         System.out.println("Play Music...");
     }
+    public abstract void sit();
     
 }
-class BMW extends Car {
+abstract class BMW extends Car {
     public void drive() {
         System.out.println("Driving...");
     }
@@ -13,6 +14,9 @@ class BMW extends Car {
     public void playMusic() {
         System.out.println("Hello Rammantey.. vachesthunna...");
     }
+    
+}
+class updatedBMW extends BMW {
     public void sit() {
         System.out.println("Four seating");
     }
@@ -21,9 +25,9 @@ class BMW extends Car {
 
 public class AbstractKeyword {
     public static void main(String[] args) {
-        Car c = new BMW();
+        Car c = new updatedBMW();
         c.drive();
         c.playMusic();
-        // c.sit();
+        c.sit();
     }
 }
