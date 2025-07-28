@@ -9,7 +9,7 @@ class Demo {
 	}
 	
 	public static void main(String... args) {
-		System.out.println(new Demo(100));
+		//System.out.println(new Demo(100));
 		System.out.println(new Demo());
 		
 		byte x = 127;
