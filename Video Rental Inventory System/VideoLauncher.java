@@ -40,14 +40,14 @@ class VideoStore {
 
 	void addVideo(String name) {
 		store[i++] = new Video(name);
-		System.out.println("Video \""+name+" added Successfully...");
+		System.out.println("Video \"" + name + " added Successfully...");
 	}
 
 	void doCheckout(String name) {
-		for(int j = 0; j < i; j++) {
-			if(store[j].getName().equalsIgnoreCase(name)) {
+		for (int j = 0; j < i; j++) {
+			if (store[j].getName().equalsIgnoreCase(name)) {
 				store[j].doCheckout();
-				System.out.println("Video "+name+" checked out successfully.");
+				System.out.println("Video " + name + " checked out successfully.");
 				return;
 			}
 		}
@@ -69,7 +69,7 @@ class VideoStore {
 		for (int j = 0; j < i; j++) {
 			if (store[j].getName().equalsIgnoreCase(name)) {
 				store[j].receiveRating(rating);
-				System.out.println("Rating \""+9+"\" has been mapped to the Video \""+name+"\""); 
+				System.out.println("Rating \"" + 9 + "\" has been mapped to the Video \"" + name + "\"");
 				return;
 			}
 		}
@@ -81,7 +81,7 @@ class VideoStore {
 		System.out.println("Video Name\t|\tCheckout Status\t|\tRating");
 		System.out.println("--------------------------------------------------------");
 		for (int j = 0; j < i; j++) {
-			System.out.println(store[j].getName()+"\t|\t"+store[j].getCheckout()+"\t|\t"+store[j].rating);
+			System.out.println(store[j].getName() + "\t|\t" + store[j].getCheckout() + "\t|\t" + store[j].rating);
 			System.out.println("--------------------------------------------------------");
 		}
 	}
@@ -111,7 +111,7 @@ class VideoLauncher {
 					String nameToAdd = sc.nextLine();
 					store.addVideo(nameToAdd);
 					break;
-					case 2:
+				case 2:
 					System.out.println("Enter the name of the video you want to check out: ");
 					String nameToCheckout = sc.nextLine();
 					store.doCheckout(nameToCheckout);
@@ -139,6 +139,7 @@ class VideoLauncher {
 				default:
 					System.out.println("please enter valid choice...");
 			}
+			sc.close();
 		}
 	}
 }
