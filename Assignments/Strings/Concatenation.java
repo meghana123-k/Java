@@ -12,5 +12,6 @@ class Concatenation {
             String s_new = s1 + " "+ s2;
             System.out.println(s_new);
         }
+        sc.close();
     }
 }

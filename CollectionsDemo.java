@@ -20,7 +20,7 @@ class CollectionsDemo {
 		int t2 = sc.nextInt();
 		System.out.println("Enter test cases ");
 		
-		for(int i = 0; i < at1.size(); i++) {
+		for(int i = 0; i < t2; i++) {
 			int x = sc.nextInt();
 			int y = sc.nextInt();
 			
@@ -30,5 +30,6 @@ class CollectionsDemo {
 				System.out.println("Error!!");
 			}
 		}
+		sc.close();
 	}
 }

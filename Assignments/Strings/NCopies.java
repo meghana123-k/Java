@@ -7,5 +7,6 @@ class NCopies {
         int n = s.length();
         String st = s.substring(0, 2);
         System.out.println(st.repeat(n));
+        sc.close();
     }
 }

@@ -4,7 +4,7 @@ class ArraysDemo {
 	public static void main(String... args) {
 		String[] details = {"abc","meghana", "csd", "b-sec"};
 		Integer marks[] = {90, 74, 46, 98};
-		char grade[] = {'b', 'b', 'a', 'c'};
+		//char grade[] = {'b', 'b', 'a', 'c'};
 		Arrays.sort(details);
 		Arrays.sort(marks);
 		//Arrays.sort(details, 1, 3);

@@ -11,5 +11,6 @@ class HalfString {
         } else {
             System.out.println(var.substring(0, n/2));
         }
+        sc.close();
     }
 }

@@ -22,5 +22,6 @@ class EnumDemo {
 		String bname = sc.next();
 		//System.out.println(Brands.Dell);
 		System.out.println(Brands.Dell.enumMethod(bname));
+		sc.close();
 	}
 }
