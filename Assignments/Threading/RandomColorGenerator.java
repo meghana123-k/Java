@@ -11,6 +11,12 @@ class RandomClass implements Runnable {
                 System.exit(0);
             }
             System.out.println(Thread.currentThread().getName()+" Random Color: "+colors[index]);
+            
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
