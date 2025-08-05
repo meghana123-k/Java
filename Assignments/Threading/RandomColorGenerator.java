@@ -4,12 +4,14 @@ class RandomClass implements Runnable {
     public void run() {
         String[] colors = {"white", "blue", "black", "green", "red", "yellow"};
         Random random = new Random();
-        int index = -1;
-        while (index != 4) {
-            index = random.nextInt(6);
+        while (true) {
+            int index = random.nextInt(6);
+            if(colors[index].equalsIgnoreCase("red")) {
+                System.out.println(Thread.currentThread().getName()+" "+colors[index]+" = "+"Stop");
+                System.exit(0);
+            }
             System.out.println(Thread.currentThread().getName()+" Random Color: "+colors[index]);
         }
-        System.out.println(colors[index]+" = "+"Stop");
     }
 }
 class RandomColorGenerator {
