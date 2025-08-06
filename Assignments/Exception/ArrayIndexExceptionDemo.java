@@ -1,3 +1,5 @@
+package Assignments.Exception;
+
 import java.util.*;
 
 class ArrayIndexExceptionDemo {
@@ -17,5 +19,6 @@ class ArrayIndexExceptionDemo {
         } catch (Exception e) {
             System.out.println(e);
         }
+        sc.close();
     }
 }
